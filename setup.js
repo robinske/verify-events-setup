@@ -15,6 +15,7 @@ const twilio = require('twilio');
 const ACCOUNT_SID = process.env.TWILIO_ACCOUNT_SID;
 const AUTH_TOKEN = process.env.TWILIO_AUTH_TOKEN;
 const WEBHOOK_URL = process.env.WEBHOOK_URL;
+const VERIFY_SERVICE_SID = process.env.VERIFY_SERVICE_SID;
 
 // Verify message status event types
 const MESSAGE_STATUS_TYPES = [
@@ -64,6 +65,20 @@ async function setup() {
         console.log(`✓ Subscription created: ${subscription.sid}`);
         console.log(`  Description: ${subscription.description}`);
         console.log(`  Subscribed to ${MESSAGE_STATUS_TYPES.length} event types\n`);
+
+        // Enable Verify Events on the service if VERIFY_SERVICE_SID is provided
+        if (VERIFY_SERVICE_SID) {
+            console.log('Enabling Verify Events on service...');
+            await client.verify.v2
+                .services(VERIFY_SERVICE_SID)
+                .update({ verifyEventSubscriptionEnabled: true });
+            console.log(`✓ Verify Events enabled on service ${VERIFY_SERVICE_SID}\n`);
+        } else {
+            console.log('⚠️  VERIFY_SERVICE_SID not provided - you must enable Verify Events manually:');
+            console.log('   1. Go to https://console.twilio.com/verify/services');
+            console.log('   2. Select your service → General');
+            console.log('   3. Toggle on "Verify Events subscribed service"\n');
+        }
 
         console.log('Setup complete! Add these to your .env file:');
         console.log(`EVENT_SINK_SID=${sink.sid}`);
