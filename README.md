@@ -1,5 +1,7 @@
 # Twilio Verify Events - SMS Delivery Tracking
 
+> **⚠️ Pilot Feature:** Verify Events is currently in Pilot with self-serve onboarding available. Consult with your Twilio account team before using in production.
+
 Webhook server example for tracking SMS delivery status with Twilio Verify Events. Demonstrates how to receive real-time message status updates (`sent`, `delivered`, `failed`, `undelivered`) for Verify SMS verifications.
 
 ## Overview
