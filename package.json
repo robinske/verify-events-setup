@@ -1,0 +1,21 @@
+{
+  "name": "verify-events-test",
+  "version": "1.0.0",
+  "description": "Complete example showing how to track SMS delivery status with Twilio Verify Events",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "setup": "node setup.js",
+    "teardown": "node teardown.js",
+    "test": "curl -X POST http://localhost:3000/events -H \"Content-Type: application/json\" -d @fixtures/sample-events.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^5.2.1",
+    "twilio": "^5.4.0"
+  }
+}
