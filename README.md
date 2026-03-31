@@ -30,8 +30,8 @@ Twilio Verify Events provides real-time message status updates through Event Str
 
 ```bash
 # Clone and install dependencies
-git clone <repository-url>
-cd verify-events-test
+git clone git@github.com:robinske/verify-events-setup.git
+cd verify-events-setup
 npm install
 
 # Configure environment

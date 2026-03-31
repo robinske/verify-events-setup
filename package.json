@@ -1,5 +1,5 @@
 {
-  "name": "verify-events-test",
+  "name": "verify-events-setup",
   "version": "1.0.0",
   "description": "Complete example showing how to track SMS delivery status with Twilio Verify Events",
   "main": "index.js",
