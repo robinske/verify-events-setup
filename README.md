@@ -93,7 +93,6 @@ npm start              # Start webhook server (port 3000)
 npm run setup          # Create Event Streams sink and subscription
 npm run teardown       # Delete Event Streams resources
 npm test               # Send fixture events to local server
-./test-local.sh        # Alternative local testing script
 ```
 
 ### Testing locally (without real SMS)
@@ -207,7 +206,6 @@ See the [Verify Events Onboarding Guide - Step 3](https://www.twilio.com/docs/ve
 ├── setup.js                      # Event Streams + Verify Events setup
 ├── teardown.js                   # Resource cleanup
 ├── send-test-verification.js     # Send test SMS to trigger events
-├── test-local.sh                 # Local testing script (uses fixtures)
 ├── fixtures/
 │   └── sample-events.json        # Sample event payloads for testing
 ├── .env.example                  # Environment variable template
