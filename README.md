@@ -366,7 +366,7 @@ Twilio cannot reach `http://localhost:3000` directly - use ngrok or deploy to a 
 
 ## License
 
-ISC
+MIT
 
 ## Contributing
 
