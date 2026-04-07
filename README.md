@@ -4,6 +4,12 @@
 
 Webhook server example for tracking SMS delivery status with Twilio Verify Events. Demonstrates how to receive real-time message status updates (`sent`, `delivered`, `failed`, `undelivered`) for Verify SMS verifications.
 
+## For AI Coding Assistants
+To have a coding agent help you set up and test this repo, copy and paste this prompt into your AI Coding Assistant:
+> Clone https://github.com/robinske/verify-events-setup and help me get it running. This tracks SMS delivery status for Twilio Verify. Follow the Quick Start in the README: set up my .env file, walk me through the ngrok setup, run the setup script, and start the webhook server. Ask me for my Twilio credentials when needed.
+After the server is running, guide me through testing: first with the fixture events (npm test), then with a real verification to my phone number so I can see live delivery events.
+
+
 ## Overview
 
 Twilio Verify Events provides real-time message status updates through Event Streams. This repository shows how to:
