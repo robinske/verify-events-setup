@@ -8,7 +8,7 @@ Webhook server example for tracking SMS delivery status with Twilio Verify Event
 
 Twilio Verify Events provides real-time message status updates through Event Streams. This repository shows how to:
 - Set up an Event Streams webhook sink and subscription
-- Receive and process Verify message status events
+- Receive and process real Verify SMS message status events
 - Test locally without sending real SMS
 
 **Key Difference:** The Verify API response tells you a verification was *created*, not whether it was *delivered*. Delivery status arrives asynchronously through Verify Events.
